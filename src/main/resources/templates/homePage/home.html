@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<a th:href="@{/people}">People</a>-->
+<form th:method="GET" th:action="@{/people}">
+    <input type="submit" value="people"/>
+</form>
+<br/>
+<hr/>
+<!--<a th:href="@{/books}">Books</a>-->
+
+<form th:method="GET" th:action="@{/books}">
+    <label for="page">Page: </label>
+    <input type="number" id="page" name="page"/>
+    <br/>
+    <label for="books_per_page">Books per page: </label>
+    <input type="number" id="books_per_page" name="books_per_page"/>
+    <br/>
+    <label for="sort_by_date">Sort by date: </label>
+    <input type="checkbox" id="sort_by_date" name="sort_by_date" value="true"/>
+    <br/>
+    <input type="submit" value="books"/>
+</form>
+<br/>
+<a th:href="@{/books/search}">search</a>
+
+</body>
+</html>
